@@ -26,6 +26,10 @@ public class CocheJuego extends Coche {
 
 
 	}
+	
+	  public JLabelCoche getGrafico() {
+		    return miCoche;
+		  }
 
 
 

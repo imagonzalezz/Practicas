@@ -1,5 +1,7 @@
 import java.awt.BorderLayout;
 import java.awt.Panel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -30,7 +32,7 @@ public class VentanaJuego extends JFrame{
 		
 
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		
+		CocheJuego coche = null;
 		
 		
 		juegoJPanel.setLayout(null);
@@ -45,15 +47,41 @@ public class VentanaJuego extends JFrame{
 		botonesJPanel.add(izquierdaButton);
 		botonesJPanel.add(derechaButton);
 		
+		JLabelCoche lbCoche = new JLabelCoche();
+		add(lbCoche, BorderLayout.CENTER);
 		
 		
+		aceleraButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				coche.acelera(10);				
+			}
+		});
 		
+		derechaButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				coche.gira(10);
+			}
+		});
+	
+		frenaButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				coche.acelera(-10);				
+			}
+		});
 		
-		
-		
-		
-		
-		
+		izquierdaButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				coche.gira(-10);
+			}
+		});
 		
 		
 		

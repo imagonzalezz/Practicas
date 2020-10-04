@@ -12,10 +12,8 @@ public class JLabelCoche extends JLabel{
 	private JPanel contentPane;
 
 	public JLabelCoche() {
-
-		JLabel lblNewLabel = new JLabel("coche");
-		lblNewLabel.setIcon(new ImageIcon("src/Practica 0/coche.png"));
-		lblNewLabel.setBounds(95, 11, 295, 224);
+		
+		setIcon(new ImageIcon(JLabelCoche.class.getResource("coche.png")));
 		
 		setBounds(0,0,100,100);
 		
