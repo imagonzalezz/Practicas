@@ -55,7 +55,9 @@ public class VentanaJuego extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				coche.acelera(10);				
+				coche.acelera(10);		
+				
+				
 			}
 		});
 		
